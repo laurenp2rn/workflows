@@ -26,8 +26,12 @@ jobs:
           Commit Message: ${{ github.event.head_commit.message }}
 
           ---
-          heihei
+          Tere! Ma tegin workflowsi ära, kas saate ära parandada mu x-i :) 
+
+          mu git: https://github.com/laurenp2rn/workflows
+
+          Aitäh ette!
+          Lauren Pärn TARge23
         to: laurenparn@outlook.com
         from: Github actions
 
-#ukskakskolm
