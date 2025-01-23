@@ -6,12 +6,9 @@ on:
       - main
 
 jobs:
-  send_email:
+  mail_on_push:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
     - name: Send email
       uses: dawidd6/action-send-mail@v3
       with:
@@ -19,15 +16,19 @@ jobs:
         server_port: 465
         username: ${{ secrets.MAIL_USERNAME }}
         password: ${{ secrets.MAIL_PASSWORD }}
-        subject: New Push to Repository ${{ github.repository }}
+        subject: workflowsi ülesanne ${{ github.repository }}
         body: |
           Repository: ${{ github.repository }}
           Pusher: ${{ github.event.pusher.name }}
           Commit Message: ${{ github.event.head_commit.message }}
 
           ---
-          heihei
+          Tere! Ma tegin workflowsi ära, kas saate ära parandada mu x-i :) 
+
+          mu git: https://github.com/laurenp2rn/workflows
+
+          Aitäh ette!
+          Lauren Pärn TARge23
         to: laurenparn@outlook.com
         from: Github actions
 
-#ukskakskolm
